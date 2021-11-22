@@ -1,9 +1,6 @@
 #Script designed to extract and rename mods to paradox games downloaded via steamdownloader
 #Download/move the archives to the mod folder
-#The only thing you need to change is your mod path
-
-#Path to the mod folder
-#path = "C:/Users/A/Documents/Paradox Interactive/Stellaris/mod"
+#The only thing you need to enter is your mod path
 import os
 import zipfile
 
@@ -43,5 +40,5 @@ def pdx_install(path):
             preappend_line(desc_path, "path=\"" + path + "/" + folder_name + "\"\n" + "name=\"" + folder_name + "\"\n")
             print("Finitto!")
 
-pdx_install(input("Enter the path to the mod folder (ex. ../mod): ").replace("\\","/"))
+pdx_install(input("Enter the path to the mod folder (ex. C:/Users/A/Documents/Paradox Interactive/Stellaris/mod): \n").replace("\\","/"))
 input("Press enter to exit...")
